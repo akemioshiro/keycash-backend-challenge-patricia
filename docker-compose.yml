@@ -1,0 +1,28 @@
+version: '3'
+
+services:
+  keycash-backend-challenge-patricia:
+    build:
+      context: .
+      dockerfile: ./api-docker.dockerfile
+    image: keycash-backend-challenge-patricia
+    container_name: keycash-backend-challenge-patricia
+    restart: always
+    env_file: .env
+    environment:
+      - NODE_ENV=$NODE_ENV
+    ports:
+      - "8000:3000"
+    volumes:
+      - .:/home/node/api
+      - node_modules:/home/node/api/node_modules
+    networks:
+      - api-network
+    command: npm run start:dev 
+
+networks:
+  api-network:
+    driver: bridge
+
+volumes:
+  node_modules:

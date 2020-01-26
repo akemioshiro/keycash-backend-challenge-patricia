@@ -1,0 +1,15 @@
+{
+    "appSettings": {
+      "nodeEnv": "NODE_ENV",
+      "port": "PORT",
+      "dataBaseSettings": {
+        "host":"HOST_CHALLENGE",
+        "database":"DATABASE_CHALLENGE",
+        "user":"USER_CHALLENGE",
+        "password":"PASSWORD_CHALLENGE",
+        "dialect": "DIALECT",
+        "port":"DATABASE_PORT_CHALLENGE"
+      }
+    }
+  }
+   

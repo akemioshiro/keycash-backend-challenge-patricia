@@ -1,0 +1,100 @@
+{
+  "name": "keycash-backend-challenge-patricia",
+  "version": "1.0.0",
+  "private": true,
+  "description": "API em node para keycash backend challenge",
+  "main": "app.js",
+  "license": "MIT",
+  "scripts": {
+    "start:dev": "nodemon",
+    "start": "node app.js",
+    "compile": "tsc -p . && gulp",
+    "lint": "eslint --ext .js,.html -f ./node_modules/eslint-friendly-formatter . --fix",
+    "prepush": "npm run lint",
+    "build": "tsc",
+    "test": "jasmine-ts --config=jasmine.json",
+    "testWithCoverage": "nyc npm test",
+    "docker:build": "docker build --file api-docker.dockerfile -t keycash-backend-challenge-patricia:latest .",
+    "docker:run": "docker run --name keycash-backend-challenge-patricia -p 8000:3000 keycash-backend-challenge-patricia"
+  },
+  "keywords": [
+    "nodejs",
+    "javascript",
+    "docker",
+    "express"
+  ],
+  "nyc": {
+    "check-coverage": true,
+    "lines": 100,
+    "functions": 100,
+    "branches": 100,
+    "exclude": [
+      "**/*.js",
+      "build",
+      "test"
+    ],
+    "reporter": [
+      "html",
+      "text",
+      "lcov"
+    ],
+    "extension": [
+      ".ts"
+    ],
+    "all": false
+  },
+  "devDependencies": {
+    "@types/bluebird": "^3.5.24",
+    "@types/config": "0.0.36",
+    "@types/cors": "^2.8.6",
+    "@types/dotenv": "^4.0.3",
+    "@types/express": "^4.17.2",
+    "@types/helmet": "0.0.45",
+    "@types/jasmine": "^3.5.0",
+    "@types/joi": "^14.3.2",
+    "@types/node": "^12.12.14",
+    "@types/sequelize": "^4.28.8",
+    "del": "^3.0.0",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.17.3",
+    "gts": "^0.9.0",
+    "gulp": "^4.0.2",
+    "gulp-typescript": "^6.0.0-alpha.1",
+    "jasmine": "^3.5.0",
+    "jasmine-console-reporter": "^3.1.0",
+    "jasmine-reporters": "^2.3.2",
+    "jasmine-spec-reporter": "^4.2.1",
+    "jasmine-ts": "^0.3.0",
+    "nodemon": "^1.19.1",
+    "sequelize-test-helpers": "^1.2.0",
+    "ts-node": "^8.5.4",
+    "ts-node-dev": "^1.0.0-pre.44",
+    "typescript": "^3.7.2"
+  },
+  "dependencies": {
+    "bluebird": "^3.5.2",
+    "body-parser": "^1.19.0",
+    "config": "^2.0.1",
+    "cors": "^2.8.5",
+    "dotenv": "^6.1.0",
+    "eslint-friendly-formatter": "^4.0.1",
+    "eslint-plugin-html": "^5.0.5",
+    "express": "^4.17.1",
+    "guid-typescript": "^1.0.9",
+    "helmet": "^3.21.2",
+    "http-status-codes": "^1.4.0",
+    "inversify": "^5.0.1",
+    "inversify-express-utils": "^6.3.2",
+    "joi": "^14.3.1",
+    "jsonwebtoken": "^8.5.1",
+    "moment": "^2.24.0",
+    "mssql": "^6.0.1",
+    "mysql2": "^2.1.0",
+    "node-uuid": "^1.4.8",
+    "reflect-metadata": "^0.1.12",
+    "sequelize": "^4.41.0",
+    "swagger-ui-express": "^4.1.2",
+    "tedious": "^3.0.1"
+  }
+}

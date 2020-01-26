@@ -1,0 +1,256 @@
+{
+	"info": {
+		"_postman_id": "8bebad06-0dc7-4cad-ae4b-9c22386278e9",
+		"name": "KeyCash Challenge",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Insere imovel",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"metragem\": 45,\n\t\"qtdQuartos\": 2,\n\t\"qtdVagasGaragem\":1,\n\t\"qtdBanheiros\":2,\n\t\"tipo\":\"1\",\n\t\"endereco\": \"Rua doutor zuquim, 123\",\n\t\"bairro\": \"santana\",\n\t\"municipio\": \"sao paulo\",\n\t\"estado\": \"SP\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:30780/api/imovel/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "30780",
+					"path": [
+						"api",
+						"imovel",
+						""
+					]
+				},
+				"description": "Get sem parametros"
+			},
+			"response": []
+		},
+		{
+			"name": "Consulta todos",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:30780/api/imovel/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "30780",
+					"path": [
+						"api",
+						"imovel",
+						""
+					]
+				},
+				"description": "Get sem parametros"
+			},
+			"response": []
+		},
+		{
+			"name": "Consulta por id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:30780/api/imovel/dbaac17f-dda4-5ee9-afd8-a3b921d8d25f",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "30780",
+					"path": [
+						"api",
+						"imovel",
+						"dbaac17f-dda4-5ee9-afd8-a3b921d8d25f"
+					]
+				},
+				"description": "Get sem parametros"
+			},
+			"response": []
+		},
+		{
+			"name": "Consulta por querystring",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:30780/api/imovel?metragem=45&qtdQuartos=2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "30780",
+					"path": [
+						"api",
+						"imovel"
+					],
+					"query": [
+						{
+							"key": "metragem",
+							"value": "45"
+						},
+						{
+							"key": "qtdQuartos",
+							"value": "2"
+						}
+					]
+				},
+				"description": "Get sem parametros"
+			},
+			"response": []
+		},
+		{
+			"name": "Atualiza imovel",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"metragem\": 25,\n    \"qtdQuartos\": 3,\n    \"qtdVagasGaragem\": 1,\n    \"qtdBanheiros\": 2,\n    \"tipo\": 1,\n    \"endereco\": \"Rua doutor zuquim, 100\",\n    \"bairro\": \"santana\",\n    \"municipio\": \"sao paulo\",\n    \"estado\": \"SP\",\n    \"dataLancamentoImovel\": null\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:30780/api/imovel/dbaac17f-dda4-5ee9-afd8-a3b921d8d25f",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "30780",
+					"path": [
+						"api",
+						"imovel",
+						"dbaac17f-dda4-5ee9-afd8-a3b921d8d25f"
+					]
+				},
+				"description": "Get sem parametros"
+			},
+			"response": []
+		},
+		{
+			"name": "Exclui imovel",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:30780/api/imovel/b6f01d62-95f8-5897-f93c-5235811f7701",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "30780",
+					"path": [
+						"api",
+						"imovel",
+						"b6f01d62-95f8-5897-f93c-5235811f7701"
+					]
+				},
+				"description": "Get sem parametros"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

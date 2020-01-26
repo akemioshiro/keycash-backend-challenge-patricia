@@ -1,0 +1,19 @@
+{
+    "appSettings": {
+      "nodeEnv": "development",
+      "port": 3077,
+      "dataBaseSettings": {
+        "host":"",
+        "database":"",
+        "user":"",
+        "password":"",
+        "dialect": "",
+        "dialectOptions": {
+          "dateStrings": true, 
+          "typeCast": true,
+          "encrypt": false
+        }
+      }
+    }
+  } 
+  
