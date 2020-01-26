@@ -15,7 +15,7 @@ Instalação do Postman para execução das APIs.
 # Após o clone do projeto, entrar no diretório 'keycash-backend-challenge-patricia/database_script' e executar o script para criação da estrutura da base de dados.
 
 
-# Após a criação da base de dados, entrar no diretório 'keycash-backend-challenge-patricia' e executar os seguintes comandos:
+# Em seguida, entrar no diretório 'keycash-backend-challenge-patricia' e executar os seguintes comandos:
 
 npm install
 
