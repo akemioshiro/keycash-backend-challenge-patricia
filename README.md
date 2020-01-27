@@ -2,7 +2,7 @@
 API CRUD que realiza operações para o registro de imóveis. 
 
 # Descrição:
-Desenvolvida uma API em node com typescript que realize inclusões, edições, buscas e exclusões de imóveis.
+Desenvolvida uma API em node com typescript que realiza inclusões, edições, buscas e exclusões de imóveis.
 
 # Pré-requisito:
 Instalação do NodeJS em sua máquina.
@@ -25,4 +25,7 @@ npm run start:dev
 
 
 # Para executar as chamadas das APIs, ir no diretório 'keycash-backend-challenge-patricia/postman' e realizar o import da collection do postman.
+
+
+# O MER da base de dados esta localizada no diretório 'keycash-backend-challenge-patricia/database_diagram'.
 
