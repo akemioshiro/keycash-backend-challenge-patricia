@@ -19,6 +19,8 @@ export abstract class BaseController<TInstance extends Sequelize.Instance<TAttri
         super();
     }
 
+    // TODO: colocar validações por token nas rotas?
+
     @httpGet("/")
     async getAll(@request() req: Request, @response() res: Response) {
 
