@@ -16,13 +16,21 @@ Instalação do Postman para execução das APIs.
 
 
 # 2. Dentro do diretório raiz 'keycash-backend-challenge-patricia', criar o arquivo ".env" com os dados da base de dados, usuário e senha. Exemplo:
+
 NODE_ENV=development
+
 PORT=30780
+
 HOST_CHALLENGE=localhost
+
 DATABASE_CHALLENGE=keycash_challenge
+
 USER_CHALLENGE=root
+
 PASSWORD_CHALLENGE=123456
+
 DIALECT=mysql
+
 DATABASE_PORT_CHALLENGE=3306
 
 Observação: verificar os campos "USER_CHALLENGE" e "PASSWORD_CHALLENGE" de acordo com as configurações locais do MySql.
