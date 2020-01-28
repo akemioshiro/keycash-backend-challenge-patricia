@@ -44,9 +44,12 @@ npm run compile
 
 npm run start:dev
 
+
+
 Observação: se tudo estiver ok, as seguintes mensagens serão exibidas: 
 
 Connected to keycash-challenge database...
+
 Listening on port: 30780.
 
 
