@@ -33,6 +33,7 @@ DIALECT=mysql
 
 DATABASE_PORT_CHALLENGE=3306
 
+
 Observação: verificar os campos "USER_CHALLENGE" e "PASSWORD_CHALLENGE" de acordo com as configurações locais do MySql.
 
 
